@@ -8,7 +8,7 @@ To enjoy the benefits of the spellchecker, please install `pyenchant` accordingl
 
 # Usage
 
-```
+```python
 from spirit_guess.enchant_detect import EnchantDetect
 from spirit_guess.ngram_detect import NgramDetect
 
