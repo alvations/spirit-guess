@@ -3,7 +3,6 @@ from functools import lru_cache
 from collections import Counter
 
 import enchant
-from tqdm import tqdm
 
 from spirit_guess.languages import SUPPORTED_LANGUAGES
 from spirit_guess.tokenize import regex_tokenize
