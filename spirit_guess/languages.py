@@ -270,13 +270,9 @@ _UNICODE_BLOCKS = {
     (12160, 12194): {'zh'},  # 'CJK Compatibility Ideographs Supplement'
 }
 
-
-def find_tuple(num):
-    # From https://stackoverflow.com/a/67236220/610569 
+def unicode_block(num):
+    # From https://stackoverflow.com/a/67236220/610569
     for (start, end), langs in _UNICODE_BLOCKS.items():
         if start <= num < end:
             return langs
     return None
-
-
-UNICODE_BLOCKS = [find_tuple(i) for i in _UNICODE_BLOCKS for i in range(12194+1)]
