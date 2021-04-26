@@ -29,9 +29,7 @@ class EnchantDetect:
 
         # Try to find a smaller subset of language using `count_chars_in_blocks`
         if not lang_set:
-            lang_set = count_chars_in_blocks(text).keys()
-            if 'un' in lang_set: # Remove unknown.
-                lang_set.remove('un')
+            lang_set = count_chars_in_blocks(text, remove_unknown=True).keys()
         # Filter down the languages to loop through.
         _languages = lang_set & self._languages
         # If there's only one language, just return 100%

@@ -61584,7 +61584,7 @@ TRIGRAM_MODEL = {
             "i"
         ]
     ],
-    "pt_br": [
+    "pt_BR": [
         [
             "e",
             "q",
@@ -63086,7 +63086,7 @@ TRIGRAM_MODEL = {
             " "
         ]
     ],
-    "pt_pt": [
+    "pt_PT": [
         [
             "e",
             "q",
