@@ -13,7 +13,11 @@ def count_chars_in_blocks(text: str, option='lang', normalize=True, remove_unkno
         try:
             # For some reason, the original code shifts to right by 4 bits
             # See https://stackoverflow.com/a/8345671/610569
-            block_counts.update(unicode_block(ord(ch) >> 4, option=option))
+            this_block = unicode_block(ord(ch) >> 4)
+            if option == 'lang'
+                block_counts.update(this_block)
+            elif option == 'script':
+                block_counts.update({this_block})
         except (TypeError, KeyError):
             block_counts[{'unknown'}] += 1
     # Normalize ths score.
