@@ -257,7 +257,7 @@ def unicode_block(num, option='lang'):
     for (start, end), (langs, scripts) in _UNICODE_BLOCKS.items():
         if start <= num < end:
             if option == 'script':
-                return script
+                return scripts
             elif option == 'lang':
                 return langs
             else:

@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
   name = 'spirit-guess',
   packages = find_packages(),
-  version = '0.0.10',
+  version = '0.0.11',
   description = '',
   long_description = '',
   author = 'Liling Tan',
