@@ -17,9 +17,9 @@ def count_chars_in_blocks(text: str, option='lang', normalize=True, remove_unkno
             if option == 'lang':
                 block_counts.update(this_block)
             elif option == 'script':
-                block_counts.update({this_block})
+                block_counts[this_block] += 1
         except (TypeError, KeyError):
-            block_counts[{'unknown'}] += 1
+            block_counts['unknown'] += 1
     # Normalize ths score.
     if normalize:
         sum_scores = sum(block_counts.values())
