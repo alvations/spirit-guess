@@ -112,7 +112,7 @@ _UNICODE_BLOCKS = {
     (83, 89): ({'hy'}, 'Armenian'),
     (89, 96): ({'he'}, 'Hebrew'),
     (96, 112): (LANGUAGE_GROUPS['arabic'], 'Arabic'),
-    (112, 117): (None 'Syriac'),
+    (112, 117): (None, 'Syriac'),
     (117, 120): (LANGUAGE_GROUPS['arabic'], 'Arabic Supplement'),
     (120, 124): (None, 'Thaana'),
     (124, 128): (None, 'NKo'),
@@ -160,7 +160,7 @@ _UNICODE_BLOCKS = {
     (453, 456): (None, 'Ol Chiki'),
     (461, 464): (None, 'Vedic Extensions'),
     (464, 472): (None, 'Phonetic Extensions'),
-    (472, 476): (aNone, 'Phonetic Extensions Supplement'),
+    (472, 476): (None, 'Phonetic Extensions Supplement'),
     (480, 496): (LANGUAGE_GROUPS['extended_latin'], 'Latin Extended Additional'),
     (496, 512): ({'el'},  'Greek Extended'),
     (519, 522): (None, 'Superscripts and Subscripts'),
@@ -259,7 +259,7 @@ def unicode_block(num, option='lang'):
             if option == 'script':
                 return script
             elif option == 'lang':
-                return lang
+                return langs
             else:
-                return lang
+                return langs
     return None
