@@ -27,6 +27,6 @@ def count_chars_in_blocks(text: str, option='lang', normalize=True, remove_unkno
             block_counts[lang] = count / sum_scores
     # Remove unknown, if user specifies.
     if remove_unknown:
-        block_counts.remove('un')
+        del block_counts['unknown']
     # Return the counter object.
     return block_counts
