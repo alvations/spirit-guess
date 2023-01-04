@@ -1,9 +1,7 @@
-import math
 from collections import Counter
 from functools import lru_cache
 
 from spirit_guess.languages import SUPPORTED_LANGUAGES
-from spirit_guess.tokenize import regex_tokenize
 from spirit_guess.ngram_model import TRIGRAM_MODEL
 
 

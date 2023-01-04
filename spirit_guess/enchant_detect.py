@@ -7,7 +7,6 @@ from spirit_guess.languages import SUPPORTED_LANGUAGES
 from spirit_guess.tokenize import regex_tokenize
 from spirit_guess.orthography import count_chars_in_blocks
 from spirit_guess.ngram_detect import NgramDetect
-from spirit_guess.ngram_model import TRIGRAM_MODEL
 
 
 class EnchantDetect:
