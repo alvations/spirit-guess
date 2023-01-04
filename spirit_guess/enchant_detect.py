@@ -31,14 +31,11 @@ class EnchantDetect:
             lang_set = count_chars_in_blocks(text, remove_unknown=True).keys()
         # Filter down the languages to loop through.
         _languages = lang_set & self._languages
-        # If there's only one language, just return 100%
-        if len(_languages) == 1:
-            scores[next(iter(_languages))] = 1.0
-        else:  # Iterate through all languages and token.
-            for lang in _languages:
-                for token in set(tokens):
-                    if self.enchant_check(token, lang):
-                        scores[lang] += score_per_token
+        # Iterate through all languages and token.
+        for lang in _languages:
+            for token in set(tokens):
+                if self.enchant_check(token, lang):
+                    scores[lang] += score_per_token
         # If best score, i.e. scores.most_common(1)[0][1] is less than threshold,
         # or no scores, return 'unknown' with 0 prob.
         result = scores.most_common(n_best)
