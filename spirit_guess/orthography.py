@@ -1,8 +1,8 @@
-
 import string
 from collections import Counter
 
 from spirit_guess.languages import unicode_block
+
 
 def count_chars_in_blocks(text: str, option='lang', normalize=True, remove_unknown=False) -> Counter:
     # Initialize counter.

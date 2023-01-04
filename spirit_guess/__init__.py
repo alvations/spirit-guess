@@ -1,4 +1,3 @@
-
 from spirit_guess.languages import SUPPORTED_LANGUAGES
 
 from spirit_guess.ngram_detect import *
